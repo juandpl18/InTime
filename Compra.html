@@ -29,6 +29,17 @@
         $cuerpo .= "Departamento: $departamento\n";
         $cuerpo .= "Código Postal: $codigopostal\n";
 
+        // Recuperar la información de los productos del carrito desde $_GET
+        if (isset($_GET['productos'])) {
+            $productosInfo = json_decode($_GET['productos'], true);
+
+        // Agregar la información de los productos al cuerpo del correo
+            $cuerpo .= "\n\nInformación de los productos:\n";
+            foreach ($productosInfo as $productoInfo) {
+                $cuerpo .= $productoInfo . "\n";
+            }
+        }
+
         // Configuración de los datos del correo
         $destinatario = "intimereloj@gmail.com";
         $asunto = "Nuevo pedido de compra";
