@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <title>Formulario de contacto</title>
+        <link rel="shortcut icon" href="IMG/logoin.jpeg" type="image/x-icon">
+        <!-- FONT OPEN SANS-->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,700;1,800&display=swap" rel="stylesheet">
+
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="stylescon.css">
+    </head>
+    <body>
+
+    <!-- nuevo video -->
+    <header class="header1">
+        <nav class="nav1"> 
+            <a href="#" id="icono1" class="icono1">Menú</a>
+            <div class="enlaces uno" id="enlaces">
+                <a href="index.html">Inicio</a>
+                <!-- <a href="portafolio.html">Portafolio</a>
+                <a href="">Acerca de</a> -->
+                <a href="contacto.html">Contacto</a>
+                <!-- <a href="">Help</a>
+                <a href="">More</a> -->
+            </div>
+        </nav>
+    </header>
+    <div>
+
+        <form action="enviar.php" nethod="post">
+            <h2>CONTACTO</h2>
+            <input type="text" name="Nombre" placeholder="Nombre" required>
+            <input type="text" name="Correo" placeholder="Correo" required>
+            <input type="text" name="Telefono" placeholder="Telefono" required>
+           <textarea name="mensaje" placeholder="Escriba aqui su mensaje"></textarea>
+            <input type="submit" value="ENVIAR" id="buton">
+        </form>
+
+        <script src="javas/main.js"></script>
+    </body>
+</html>
