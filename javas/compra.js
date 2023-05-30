@@ -45,12 +45,21 @@ if (currentURL.includes('index.html')) {
     }
     
     btnrelaizarcom.addEventListener('click', () => {
-        // carrito.forEach(product => {
-        //     const title = product.title;
-        //     alert("Título del producto: " + title);
-        // });
-        //alert ("Funciona");
+        // Obtener los productos del carrito desde el localStorage
+        const carrito = JSON.parse(localStorage.getItem('carrito'));
 
+        // Crear un array para almacenar la información de los productos
+        const productosInfo = [];
+
+        // Recorrer los productos del carrito y agregar la información al array
+        carrito.forEach(product => {
+            const productoInfo = `${product.quantity} - ${product.title} - ${product.price}`;
+            productosInfo.push(productoInfo);
+        });
+
+        // Redireccionar a la página de PHP y pasar la información de los productos por URL
+        const url = `Compra.php?productos=${encodeURIComponent(JSON.stringify(productosInfo))}`;
+        window.location.href = url;
 
     });
 
