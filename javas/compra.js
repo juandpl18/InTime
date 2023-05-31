@@ -15,7 +15,7 @@ if (currentURL.includes('index.html')) {
     localStorage.setItem('carrito', JSON.stringify(carrito));
 
     if (carrito && carrito.length > 0) {
-        window.location.href = 'Compra.php';
+        window.location.href = 'Compra.html';
     }
     });
     
